@@ -37,7 +37,7 @@ const StyledHeader = styled.header`
       color: black;
     }
 
-    &:active {
+    &.active {
       background-color: rgb(167, 240, 130);
       color: black;
     }
