@@ -1,16 +1,13 @@
 import React from "react";
-
 import "./Global-Styles.scss";
-import getfilteredData from "./filterData";
-import useFetchAsync_Then from "./fetchData";
+import getfilteredData from "./services/filterData";
+import useFetchAsync_Then from "./services/fetchData";
 import Header from "./components/Header.component";
 import Main from "./components/main/Main.component";
-
-const url =
-  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
+import API_URL from "./services/api";
 
 const App = () => {
-  const { data, isLoading, isError } = useFetchAsync_Then(url);
+  const { data, isLoading, isError } = useFetchAsync_Then(API_URL);
   const [sortInputs, setSortInputs] = React.useState({
     searchInput: "",
     sortByMktCap: false,
