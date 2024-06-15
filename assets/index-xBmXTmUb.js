@@ -75,7 +75,7 @@ Error generating stack: `+o.message+`
       color: black;
     }
 
-    &:active {
+    &.active {
       background-color: rgb(167, 240, 130);
       color: black;
     }
