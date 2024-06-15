@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./styles.scss";
+import "./Global-Styles.scss";
 import getfilteredData from "./filterData";
 import useFetchAsync_Then from "./fetchData";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import Header from "./components/Header.component";
+import Main from "./components/main/Main.component";
 
 const url =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";

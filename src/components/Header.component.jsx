@@ -1,8 +1,54 @@
+import styled from "styled-components";
+
+const StyledHeader = styled.header`
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 16px;
+
+  //styling nested components
+
+  input {
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: none;
+    height: 50px;
+    color: white;
+    padding-inline: 16px;
+    font-size: 20px;
+
+    &::placeholder {
+      color: rgb(220, 214, 214);
+    }
+
+    &:focus {
+      border-radius: none;
+      outline: none;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 18px;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+
+    &:active {
+      background-color: rgb(167, 240, 130);
+      color: black;
+    }
+  }
+`;
+
 const Header = ({ sortInputs, setSortInputs }) => {
   const { searchInput, sortByMktCap, sortByPercentage } = sortInputs;
 
   return (
-    <header>
+    <StyledHeader>
       <input
         id="searchInput"
         value={searchInput}
@@ -28,7 +74,7 @@ const Header = ({ sortInputs, setSortInputs }) => {
       >
         Sort by percentage
       </button>
-    </header>
+    </StyledHeader>
   );
 };
 
