@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: black;
+    padding-block:100px;
+    color:white;
+    position: relative;
+
+    @media (max-width:550px){
+        padding: 100px 10px;
+    }
+
+}
+
+#root{
+    min-height: 100vh;
+    width: 1050px;
+    margin-inline:auto;
+    @media (max-width:550px){
+        overflow-x: scroll;
+    }
+}
+
+.test{
+    display: flex;
+    gap:10px;
+    position: absolute;
+    top:10px;
+    left:40%;
+    button{
+        padding:6px 12px;
+        background-color: transparent;
+        border:solid white;
+        color:white;
+    }
+    button.active{
+        background-color: yellow;
+        color:black;
+        
+    }
+    @media (max-width:550px){
+        left: 20px;
+    }
+
+}
+
+// header -section
+
+header{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap:16px;
+   
+
+    input{
+        border:2px solid white;
+        background-color: transparent;
+        border-radius: none;
+        height: 50px;
+        color:white;
+        padding-inline:16px;
+        font-size: 20px;
+
+        &::placeholder{
+            color: rgb(220, 214, 214);
+        }
+
+    }
+    input:focus{
+        border-radius: none;
+        outline: none;
+    }
+
+    button{
+        background-color: transparent;
+        border: 2px solid white;
+        font-size: 18px;
+        color:white;
+    }
+    button:hover{
+        background-color: white;
+        color:black;
+
+    }
+    button.active{
+        background-color: rgb(167, 240, 130);
+        color:black;
+    }
+   
+}
+
+
+
+// main section
+
+main{
+    padding-block:40px;
+    .msg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+    }
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+  
+    td{
+      
+        text-align: right;
+        font-size: 20px;
+        padding-block: 24px;
+        border-bottom: 1px solid white;
+    }
+
+   tr td:first-child{
+        text-align: left;  
+        display: flex;
+        align-items: center;
+        gap:16px;
+        img{
+            height: 30px;
+            width: 30px;
+        } 
+    }
+
+    tr td:last-child{
+        width: 270px;
+    }
+   
+    td:nth-of-type(3){
+        width: 180px;
+    }
+    td:nth-of-type(5){
+
+        width: 120px;
+        text-align: right;
+    }
+
+    
+
+
+
+ 
+    
+}
+
+
+
